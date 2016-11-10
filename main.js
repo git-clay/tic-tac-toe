@@ -1,24 +1,32 @@
 //locate elements to use (document.getElementById, document.getElementByClassName,etc)
 $(document).ready(function(){
+var turn = 1;
+//odd turns will be oh. even will be ex.
 
-var $findCell = $('id').click(function(){
-	console.log($findCell);
+$('.cell').click(function(){
+if (turn%2 ===1){		//if the turn is odd (oh)
+	$(this).attr('class','oh cell');
+	turn ++;
+	console.log(turn);
+}
+else if(turn%2===0){		//turn is even (ex)
+$(this).attr('class','ex cell');
+turn ++;
+		console.log(turn);
+}
 });
 
+//function create new class .ex or .oh onto div
+
 /*
-var $findColumn = function(){
-	document.getElementsByClassName('column');
-	console.log(findColumn);
-} ;
-	
+var $newEx = $(function(){
+	$('#ex')
+});
 */
-
-
+//cell number >into> $currentId >into> div
 
 //onclick function to select and imput x or o for current player
-var selectTile =function(onclick){
 
-};
 
 
 //function to determine current player
