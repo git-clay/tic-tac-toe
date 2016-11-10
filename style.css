@@ -25,9 +25,11 @@ tr{
 td{
 	margin:0 auto;
 	text-align: center;
+	display: block;
 	width:150px;
 	height:150px;
 	border: 2px #333333 solid;
+	background: red;
 }
 td a{
 	display: block;
