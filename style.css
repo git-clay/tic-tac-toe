@@ -41,7 +41,7 @@ input{
 
 /*--------x's and o's--------*/
 .ex{
-
+background: blue;
 }
 .oh{
 background: red;

@@ -1,16 +1,21 @@
 //locate elements to use (document.getElementById, document.getElementByClassName,etc)
 $(document).ready(function(){
-var turn = 0;
+var turn = 1;
 //odd turns will be oh. even will be ex.
-//if (turn%2 ===1){		//if the turn is odd (oh)
-var $currentId = $('.cell').click(function(){	//looks for cell and waits for a click
-	var current = this.id;
-	$('current').append('div').append('<h2>').append('O');
-	console.log(this.id);		//this referest to the current cell so this.id give the .id number
-	console.log(this.class);
-	turn++;
+
+$('.cell').click(function(){
+if (turn%2 ===1){		//if the turn is odd (oh)
+	$(this).attr('class','oh cell');
+	turn ++;
 	console.log(turn);
+}
+else if(turn%2===0){		//turn is even (ex)
+$(this).attr('class','ex cell');
+turn ++;
+		console.log(turn);
+}
 });
+
 //function create new class .ex or .oh onto div
 
 /*
@@ -21,9 +26,7 @@ var $newEx = $(function(){
 //cell number >into> $currentId >into> div
 
 //onclick function to select and imput x or o for current player
-var selectTile =function(onclick){
-	//if player 
-};
+
 
 
 //function to determine current player
