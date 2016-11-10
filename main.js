@@ -8,14 +8,19 @@ var ohArray=[];
 
 //√odd turns will be oh. even will be ex.
 console.log('outside');
+$('h3').html("It is X's turn");
+
 $('.cell').click(function(){				//searches for the .cell class and waits for click
 	if (turn%2 ===1){						//if the turn is odd (oh)
+
+		$('h3').html("It is X's turn");
 		$(this).attr('class','oh cell');	//this refers to the div that was clicked. applies the classes .oh and .cell
 		$(this).append('<h2>O</h2>');		//adds an h2 with an o in it
 		exArray.push($(this).attr('id'));
 		turn ++;							//advances the turn
 	}
 	else if(turn%2===0){					//turn is even (ex)
+		$('h3').html("It is O's turn");
 		$(this).attr('class','ex cell');	//adds an h2 in the selected div with X in it
 		$(this).append('<h2>X</h2>');
 		ohArray.push($(this).attr('id'));

@@ -7,8 +7,12 @@ h1{
 /*-------text---------*/
 h1{
 	font-size: 40px;
+	margin: 2% auto;
 }
-
+h3{
+	text-align: center;
+	margin: 1% auto;
+}
 
 /*-------table---------*/
 /* tr=rows td=cell in row */
